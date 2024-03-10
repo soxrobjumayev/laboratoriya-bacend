@@ -12,12 +12,11 @@ create table admins(
  created_at timestamp default current_timestamp,
     updated_at timestamp,
     deleted_at timestamp,
-    ip varchar
-   
+    ip varchar not null
 
 );
 
-insert into admins(admin_name,password) values ('asad',crypt('1234',gen_salt('bf')));
+insert into admins(admin_name,password,ip) values ('asad',crypt('1234',gen_salt('bf')),'192.168.31.210');
 
 
 
@@ -27,11 +26,10 @@ create table yangilik(
     yangilik_id serial primary key,
     yangilik_title varchar(60) not null,
      yangilik_body varchar not null,
-        created_at timestamp default current_timestamp,
+    created_at timestamp default current_timestamp,
     updated_at timestamp,
     deleted_at timestamp
    
-
 );
 
 insert into yangilik(yangilik_title,yangilik_body)values 

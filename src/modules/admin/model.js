@@ -13,9 +13,10 @@ const LOGIN = async ({ admin_name, password}) => {
             `
             select
             admin_id,
-            admin_name
+            admin_name, 
+            ip
             from admins
-            where admin_name = $1 and password= crypt($2,password)
+            where admin_name = $1 and password= crypt($2,password) 
             `, [admin_name, password]
         )
     } catch (error) {

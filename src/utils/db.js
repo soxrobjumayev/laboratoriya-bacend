@@ -2,12 +2,9 @@
 import pg from 'pg'
 
 
-const pool = new pg.Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'web_laboratorya',
-    password: 'tP3Q1TlZBT2YTtxdUX9bFGCTHxBZsXrK'
+const pool = new pg.Pool({connectionString:'postgres://ngijvhai:olJeHcxZ51expPOMGS2HgdrCBVZFlTux@floppy.db.elephantsql.com/ngijvhai',
 })
+
 
 
 async function fetchAll(SQL, params = []) {

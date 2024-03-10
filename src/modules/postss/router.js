@@ -2,19 +2,20 @@
 import { Router } from "express";
 import controllers from "./controllers.js";
 import token from '../../middlewares/checktoken.js'
+import ipAdress from "../../middlewares/ipAdress.js";
 
  
 const  router = Router()
 
-router.get('/GET_yangilik',token,controllers.GET_yangilik)
+router.get('/GET_yangilik', controllers.GET_yangilik)
 router.get('/GET_maqola',controllers.GET_maqola)
-router.get('/GET_ariza',token,controllers.GET_ariza)
+router.get('/GET_ariza',controllers.GET_ariza)
 
 
 
 router.post('/POST_yangilik',token,controllers.POST_yangilik)
 router.post('/POST_maqola',token,controllers.POST_maqola)
-// router.post('/POST_ariza',controllers.POST_arizaa)
+router.post('/POST_ariza', controllers.POST_arizaa)
 
 
 

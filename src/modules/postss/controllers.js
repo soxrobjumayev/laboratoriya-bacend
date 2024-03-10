@@ -58,20 +58,23 @@ const POST_maqola = async (req, res) => {
     }
 
 
-    const POST_arizaa = async (req, res) => {
-
-
-        try {
-            const cate = await model.POST_ariza(req.body)
-            res.status(200).send(cate)
-        } catch (error) {
-            console.log('POST_ariza_cont', error.message);
-        }
-
-    }
+    
 }
 
 
+
+
+const POST_arizaa = async (req, res) => {
+
+
+    try {
+        const cate = await model.POST_ariza(req.body)
+        res.status(200).send(cate)
+    } catch (error) {
+        console.log('POST_ariza_cont', error.message);
+    }
+
+}
 
 
 const yangilik_DELETE = async (req, res) => {
@@ -144,7 +147,7 @@ export default {
 
     POST_yangilik,
     POST_maqola,
-    // POST_arizaa,
+    POST_arizaa,
     
 
 
