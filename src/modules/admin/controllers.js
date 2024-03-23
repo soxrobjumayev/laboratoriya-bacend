@@ -12,7 +12,7 @@ import jwt from '../../utils/jwt.js'
                 status:200,
                 message:'ok',
                 data: admin,
-                token: jwt.sign({adminId: admin.admin_id})
+                token: jwt.sign({adminId: admin.adminId})
             }
             )
 

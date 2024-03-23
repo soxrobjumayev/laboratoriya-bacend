@@ -6,7 +6,7 @@ import ipadress from '../../middlewares/ipAdress.js'
 
 const router = Router()
 
-router.post('/login', ipadress, controllers.LOGIN)
+router.post('/login',  controllers.LOGIN)
 
 
 
