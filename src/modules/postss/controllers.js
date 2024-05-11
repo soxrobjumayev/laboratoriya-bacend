@@ -82,6 +82,7 @@ const yangilik_DELETE = async (req, res) => {
 
     try {
         const yangilikdel = await model.yangilik_DELETE(req.params)
+        console.log(yangilikdel);
         res.status(200).send(yangilikdel)
     } catch (error) {
         console.log('yangilik_delete', error.message);
@@ -95,7 +96,7 @@ const maqola_DELETE = async (req, res) => {
 
 
     try {
-        const maqola_del = await model.maqola_DELETE(req.params)
+        const maqola_del = await model.maqola_DELETES(req.params)
         res.status(200).send(maqola_del)
     } catch (error) {
         console.log('maqola_delete', error.message);

@@ -110,9 +110,14 @@ deleted_at = current_timestamp
 where maqola_id = $1 returning *
 `
 
+// update maqola 
+// set 
+// deleted_at = current_timestamp
+// where maqola_id = 4;
 
 
-const maqola_DELETE = async ({maqola_id}) => {
+
+const maqola_DELETES = async ({maqola_id}) => {
     try {
         return await fetchAll(DELETEEE,[maqola_id])
     } catch (error) {
@@ -169,10 +174,10 @@ export default {
 
     POST_yangilik,
     POST_maqola,
-    // POST_ariza,
+    POST_ariza,
 
     yangilik_DELETE,
-    maqola_DELETE,
+    maqola_DELETES,
 
 
     PUT_yangilik,
